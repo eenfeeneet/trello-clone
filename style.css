@@ -1,15 +1,14 @@
 html {
-	font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 body {
-
+  background-color: #03b5aa;
 }
 
 h1 {
-	color: blue;
+  color: blue;
 }
 
 h2 {
-
 }
