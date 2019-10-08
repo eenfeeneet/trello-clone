@@ -1,11 +1,15 @@
 import './app-navbar.js';
+import './app-board.js';
+import './app-create.js';
 
 window.addEventListener('load', () => {
   loadApp();
 });
 
 function loadApp() {
-  const nav = document.querySelector('nav');
+  const main = document.getElementById('app');
   const navBar = document.createElement('app-navbar');
-  nav.appendChild(navBar);
+  const board = document.createElement('app-board');
+  main.appendChild(navBar);
+  main.appendChild(board);
 }

@@ -1,14 +1,9 @@
 html {
   font-family: 'Noto Sans JP', sans-serif;
+  height: 100vh;
 }
 
 body {
   background-color: #03b5aa;
-}
-
-h1 {
-  color: blue;
-}
-
-h2 {
+  height: 100%;
 }
