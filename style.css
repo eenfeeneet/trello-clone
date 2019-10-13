@@ -1,9 +1,13 @@
 html {
   font-family: 'Noto Sans JP', sans-serif;
-  height: 100vh;
 }
 
 body {
-  background-color: #03b5aa;
+  background-color: #f7c4a5;
+  height: 100vh;
+
+  margin: 0;
+}
+.app {
   height: 100%;
 }
