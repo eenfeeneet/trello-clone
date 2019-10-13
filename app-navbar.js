@@ -35,11 +35,6 @@ class NavBar extends HTMLElement {
     navbar.setAttribute('class', 'topnav');
     navbar.setAttribute('id', 'myTopnav');
 
-    // var homeLink = document.createElement('a');
-    // homeLink.setAttribute('class', 'active');
-    // homeLink.setAttribute('href', '#home');
-    // homeLink.textContent = 'home';
-
     var newsLink = document.createElement('a');
     newsLink.textContent = 'Trello-Clone';
 

@@ -24,11 +24,11 @@
       window.addEventListener('load', () => {
         getData();
       });
-      const app = document.querySelector('app-board');
-      import('./app-board.js').then(() => {
-        // app.data = { title: 'trello-clone' };
-        app.data = [{ title: 'trello-clone', name: 'asdsad' }];
-      });
+      // const app = document.querySelector('app-board');
+      // import('./app-board.js').then(() => {
+      //   // app.data = { title: 'trello-clone' };
+      //   app.data = [{ title: 'trello-clone', name: 'asdsad' }];
+      // });
 
       const url = 'http://localhost:3000/columns';
       async function getData() {
