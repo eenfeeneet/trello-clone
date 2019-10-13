@@ -7,21 +7,24 @@ class NavBar extends HTMLElement {
 
     style.textContent = `
     .topnav {
-      background-color: #027770;
-      border: 2px solid #04998F;
-      border-radius: 5px;
-      height: 3em;
-      padding: 2px;
+      -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 25px 15px rgba(0,0,0,0.5); 
+      box-shadow: 0px 10px 13px -7px #000000, 0px 0px 25px 15px rgba(0,0,0,0.5);
+      background: #008CFF;
+      border: 5px ridge #916953;
+      border-radius: 20px;
+      height: 5rem;
+      box-sizing: border-box;
+      margin: 1rem;
+      display: flex;
+      justify-content: center;
+      font-family: 'Noto Sans JP', sans-serif;
     }
     
     .topnav a {
-      display: block;
-      color: #00BFB2;
+      align-self: center;
       text-align: center;
-      padding: 10px 15px;
       text-decoration: none;
-      font-size: 1rem;
-      box-sizing: border-box;
+      font-size: 1.5rem;
     }
     
     .topnav a:hover {
@@ -38,7 +41,6 @@ class NavBar extends HTMLElement {
     // homeLink.textContent = 'home';
 
     var newsLink = document.createElement('a');
-    newsLink.setAttribute('href', '#news');
     newsLink.textContent = 'Trello-Clone';
 
     shadow.appendChild(style);
