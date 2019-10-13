@@ -13,8 +13,30 @@
   </head>
 
   <body>
-    <div id="app"></div>
-    <!-- <h1>Bad no!</h1> -->
-    <script src="index.js" type="module"></script>
+    <div class="app">
+      <app-navbar></app-navbar>
+      <app-board></app-board>
+    </div>
+
+    <script src="app-navbar.js" type="module"></script>
+    <script src="app-board.js" type="module"></script>
+    <script>
+      window.addEventListener('load', () => {
+        getData();
+      });
+      const app = document.querySelector('app-board');
+      import('./app-board.js').then(() => {
+        // app.data = { title: 'trello-clone' };
+        app.data = [{ title: 'trello-clone', name: 'asdsad' }];
+      });
+
+      const url = 'http://localhost:3000/columns';
+      async function getData() {
+        const res = await fetch(url);
+        const json = await res.json();
+        console.log(json);
+        const main = document.querySelector('main');
+      }
+    </script>
   </body>
 </html>

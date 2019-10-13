@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/eenfeeneet/trello-clone/issues"
   },
-  "homepage": "https://github.com/eenfeeneet/trello-clone#readme"
+  "homepage": "https://github.com/eenfeeneet/trello-clone#readme",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
 }
