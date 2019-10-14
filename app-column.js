@@ -16,6 +16,8 @@ border-radius: 20px;
           .column-title {
             text-align: center;
             font-size: 0.75rem;
+            display: flex;
+            justify-content: space-around;
           }
           .column-content {
             
@@ -110,6 +112,7 @@ border-radius: 20px;
         <div class="column">
           <div class="column-title">
             <h3></h3>
+            <button class="btn rmv-column">delete</button>
           </div>
           <div class="column-content">
             <div class="column-cards">
@@ -143,7 +146,7 @@ border-radius: 20px;
     // fires after the element has been attached to the DOM
     connectedCallback() {
       const removeElementButtons = [
-        ...this.shadowRoot.querySelectorAll('.editable-list-remove-item')
+        ...this.shadowRoot.querySelectorAll('.rmv-column')
       ];
       const addElementButton = this.shadowRoot.querySelector('.add-card');
       this.cardsContainer = this.shadowRoot.querySelector('.column-cards');
@@ -199,7 +202,13 @@ border-radius: 20px;
     }
 
     removeListItem(e) {
-      e.target.parentNode.remove();
+      // e.target.parentNode.remove();
+      const el = this.shadowRoot.parentNode;
+      const el2 = this.shadowRoot.parentElement;
+      console.log(el);
+      console.log(el2);
+      console.log('delete');
+      // e.target.parentNode.parentNode.remove();
     }
   }
 

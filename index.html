@@ -22,21 +22,28 @@
     <script src="app-board.js" type="module"></script>
     <script>
       window.addEventListener('load', () => {
-        getData();
+        // getData();
       });
-      // const app = document.querySelector('app-board');
-      // import('./app-board.js').then(() => {
-      //   // app.data = { title: 'trello-clone' };
-      //   app.data = [{ title: 'trello-clone', name: 'asdsad' }];
-      // });
+      const app = document.querySelector('app-board');
+      import('./app-board.js').then(() => {
+        const url =
+          'https://my-json-server.typicode.com/eenfeeneet/data/columns';
+        fetch(url)
+          .then(resp => resp.json())
+          .then(function(data) {
+            console.log(data);
+            app.columns = data;
+          });
+      });
 
-      const url = 'http://localhost:3000/columns';
-      async function getData() {
-        const res = await fetch(url);
-        const json = await res.json();
-        console.log(json);
-        const main = document.querySelector('main');
-      }
+      // const url = 'https://my-json-server.typicode.com/eenfeeneet/data/columns';
+      // async function getData() {
+      //   const app = document.querySelector('app-board');
+      //   const res = await fetch(url);
+      //   const json = await res.json();
+      //   console.log(json);
+      //   app.columns = json;
+      // }
     </script>
   </body>
 </html>

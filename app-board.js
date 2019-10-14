@@ -177,41 +177,54 @@ import './app-column.js';
 
       this.handleRemoveItemListeners(removeElementButtons);
       addElementButton.addEventListener('click', this.addColumn, false);
+
+      this.renderColumn();
+    }
+
+    renderColumn() {
+      console.log(this.columns);
     }
 
     addColumn(e) {
       const textInput = this.shadowRoot.querySelector('.col-input');
 
       if (textInput.value) {
-        const button = document.createElement('button');
         const column = document.createElement('app-column');
 
-        button.classList.add('editable-list-remove-item', 'icon');
+        // button.classList.add('editable-list-remove-item', 'icon');
 
         column.title = textInput.value;
-        button.innerHTML = '&ominus;';
 
-        column.appendChild(button);
         this.columnContainer.appendChild(column);
-
-        this.handleRemoveItemListeners([button]);
 
         textInput.value = '';
       }
     }
 
-    get items() {
-      const items = [];
+    // get items() {
+    //   const items = [];
 
-      [...this.attributes].forEach(attr => {
-        if (attr.name.includes('list-item')) {
-          items.push(attr.value);
-        }
-      });
+    //   [...this.attributes].forEach(attr => {
+    //     if (attr.name.includes('list-item')) {
+    //       items.push(attr.value);
+    //     }
+    //   });
 
-      return items;
+    //   return items;
+    // }
+    static get properties() {
+      return {
+        columns
+      };
     }
+    // get columns() {
+    //   return this.columns;
+    // }
 
+    // set columns(value) {
+    //   this.columns = value;
+    //   this.renderColumn();
+    // }
     handleRemoveItemListeners(arrayOfElements) {
       arrayOfElements.forEach(element => {
         element.addEventListener('click', this.removeListItem, false);
